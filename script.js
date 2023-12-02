@@ -31,9 +31,23 @@ function handleSubmit(event) {
     document.getElementById('titleInput').value = '';
     document.getElementById('annualSalaryInput').value = '';
     
-        let salaryNum = Number(annualSalary)
-         totalMonthly += salaryNum
-console.log(totalMonthly)
+let salaryNum = Number(annualSalary)
+totalMonthly += salaryNum / 12;
+
+let totalMonthlyCount = document.getElementById("totalmonthly");
+totalMonthlyCount.innerHTML = 
+`
+<tr>
+<td>$${totalMonthly}</td>
+</tr>
+`
+if (totalMonthly > 20000)
+totalMonthlyCount.innerHTML +=
+`
+<tr>
+<td id="over-budget"><b>OVER-BUDGET<b></td>
+</tr>
+`
 }
 function deleteEmployee(event) {
     event.preventDefault();

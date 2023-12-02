@@ -11,3 +11,7 @@ table {
     border-collapse: collapse;
 float: center
   }
+  
+  #over-budget {
+    color: red
+  }
