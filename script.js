@@ -18,7 +18,7 @@ function handleSubmit(event) {
         <th>${lastName}</th>
         <th>${employeeId}</th>
         <th>${jobTitle}</th>
-        <th>${annualSalary}</th>
+        <th>$${annualSalary}</th>
         <th><button onclick="deleteEmployee(event)">:x:</button></th>
         </tr>
         </tr>
@@ -32,13 +32,14 @@ function handleSubmit(event) {
     document.getElementById('annualSalaryInput').value = '';
     
 let salaryNum = Number(annualSalary)
-totalMonthly += salaryNum / 12;
+totalMonthly += salaryNum / 12
+totalMonthly = Math.round(totalMonthly);
 
 let totalMonthlyCount = document.getElementById("totalmonthly");
 totalMonthlyCount.innerHTML = 
 `
 <tr>
-<td>$${totalMonthly}</td>
+<td id="monthlyamount">$${totalMonthly}</td>
 </tr>
 `
 if (totalMonthly > 20000)

@@ -9,9 +9,21 @@ table {
   }
   tr {
     border-collapse: collapse;
-float: center
+text-align:center
   }
   
   #over-budget {
-    color: red
+    color: red;
+    text-align: center;
+    font-size: 150%;
   }
+h3 {
+  text-align: center;
+}
+h1 {text-align: center
+  ;}
+  #monthlyamount {
+    text-align: center;
+    font-size: 200%;
+  }
+  
