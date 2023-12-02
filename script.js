@@ -9,14 +9,18 @@ function handleSubmit(event) {
         let jobTitle = document.getElementById("titleInput").value;
         let annualSalary = document.getElementById("annualSalaryInput").value;
         tableBody.innerHTML +=
-
-        `<tr>
-            <td>${firstName}</td>
-            <td>${lastName}</td>
-            <td>${employeeId}</td>
-            <td>${jobTitle}</td>
-            <td>${annualSalary}</td>
-        </tr>`;
+`
+       <tr>
+        <th>${firstName}</th>
+        <th>${lastName}</th>
+        <th>${employeeId}</th>
+        <th>${jobTitle}</th>
+        <th>${annualSalary}</th>
+        <th><button onclick="deleteEmployee(event)">:x:</button></th>
+        </tr>
+        </tr>
+       
+        `
     
    document.getElementById('firstNameInput').value = '';
     document.getElementById('lastNameInput').value = '';
@@ -24,3 +28,8 @@ function handleSubmit(event) {
     document.getElementById('titleInput').value = '';
     document.getElementById('annualSalaryInput').value = '';
 }
+function deleteEmployee(event) {
+    event.preventDefault();
+   event.target.parentElement.parentElement.remove();
+  }
+  
