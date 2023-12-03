@@ -16,10 +16,10 @@ function handleSubmit(event) {
        <tr>
         <th>${firstName}</th>
         <th>${lastName}</th>
-        <th>${employeeId}</th>
+        <th>#${employeeId}</th>
         <th>${jobTitle}</th>
         <th>$${annualSalary}</th>
-        <th><button onclick="deleteEmployee(event)">:x:</button></th>
+        <th><button onclick="deleteEmployee(event)">❌</button></th>
         </tr>
         </tr>
        

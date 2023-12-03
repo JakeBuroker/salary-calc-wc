@@ -13,39 +13,44 @@
   <main>
     <section>
     <h2>Add Employee</h2>
-    <form onsubmit=handleSubmit(event)>
+    <form id="subform" onsubmit=handleSubmit(event)>
       <input
-        placeholder="first name"
+        placeholder="First Name"
         type="text"
         data-testid="firstNameInput"
-        id="firstNameInput">
+        id="firstNameInput"
+        class ="inputfonts">
       <input
-        placeholder="last name"
+        placeholder="Last Name"
         type="text"
         data-testid="lastNameInput"
-        id="lastNameInput">
+        id="lastNameInput"
+        class ="inputfonts">
        <input
-        placeholder="employee ID"
+        placeholder="Employee ID"
         type="text"
         data-testid="idInput"
-        id="idInput">
+        id="idInput"
+        class ="inputfonts">
         <input
-        placeholder="job title"
+        placeholder="Job Title"
         type="text"
         data-testid="titleInput"
-        id="titleInput">
+        id="titleInput"
+        class ="inputfonts">
         <input
-        placeholder="annual salary"
+        placeholder="Annual Salary"
         type="text"
         data-testid="annualSalaryInput"
-        id="annualSalaryInput">
-        <button data-testid="submitButton">
-          Submit
+        id="annualSalaryInput"
+        class ="inputfonts">
+        <button id = "submitbut" data-testid="submitButton">
+          <b>Submit</b>
         </button>
     </form>
     </section>
     <section>
-      <h2>Employee List</h2>
+
       <table> 
         <tr>
           <th>First Name</th> 
@@ -63,7 +68,7 @@
     </section>
   </main>
   <footer>
-    <h3> Total Monthly Salary </h3>
+    <h3> Total Monthly Salary: </h3>
     <table>     
         <tbody id="totalmonthly">
 
