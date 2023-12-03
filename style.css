@@ -48,7 +48,7 @@ h1 {
   font-style: italic; 
 }
 input[type="text"] {
-  width: 18%;
+  width: 14%;
   border: 3px solid #000000;
   text-align: center;
   border-style: outset;
@@ -62,15 +62,15 @@ input[type="text"] {
   background-color: #4CAF50;
   color: rgb(0, 0, 0);
   cursor: pointer;
-font-size: 125%;
+font-size: 100%;
 Font-family: impact, sans-serif;
-width: 5%;
+width: 4.5%;
 }
 h2 {
   color: rgb(0, 0, 0);
   Font-family: Geneva;
   text-align: center;
-  font-size: 150%;
+  font-size: 125%;
   padding: 10px;
   border: 3px solid rgb(0, 0, 0);
   display: inline-block;
