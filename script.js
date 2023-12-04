@@ -3,14 +3,15 @@ let totalMonthly = 0
 function handleSubmit(event) {
         event.preventDefault();
         let tableBody = document.getElementById("tableBody");
-        
-  
+        let USD = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            });
         let firstName = document.getElementById("firstNameInput").value;
         let lastName = document.getElementById("lastNameInput").value;
         let employeeId = document.getElementById("idInput").value;
         let jobTitle = document.getElementById("titleInput").value;
-        let annualSal = document.getElementById("annualSalaryInput").value;
-        let annualSalary = annualSal.toLocaleString();
+        let annualSalary = document.getElementById("annualSalaryInput").value;
         tableBody.innerHTML += 
    
 `
@@ -19,7 +20,7 @@ function handleSubmit(event) {
         <th>${lastName}</th>
         <th>#${employeeId}</th>
         <th>${jobTitle}</th>
-        <th>$${annualSalary}</th>
+        <th>${USD.format(annualSalary)}</th>
         <th><button onclick="deleteEmployee(event)">❌</button></th>
         </tr>
         </tr>
@@ -40,10 +41,10 @@ let totalMonthlyCount = document.getElementById("totalmonthly");
 totalMonthlyCount.innerHTML = 
 `
 <tr>
-<td id="monthlyamount">$${totalMonthly.toLocaleString()}</td>
+<td id="monthlyamount">${totalMonthly.toLocaleString()}</td>
 </tr>
 `
-if (totalMonthly > 20000)
+if (totalMonthly > 20000.00)
 totalMonthlyCount.innerHTML +=
 `
 <tr>
