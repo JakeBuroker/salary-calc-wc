@@ -9,7 +9,8 @@ function handleSubmit(event) {
         let lastName = document.getElementById("lastNameInput").value;
         let employeeId = document.getElementById("idInput").value;
         let jobTitle = document.getElementById("titleInput").value;
-        let annualSalary = document.getElementById("annualSalaryInput").value;
+        let annualSal = document.getElementById("annualSalaryInput").value;
+        let annualSalary = annualSal.toLocaleString();
         tableBody.innerHTML += 
    
 `
@@ -39,7 +40,7 @@ let totalMonthlyCount = document.getElementById("totalmonthly");
 totalMonthlyCount.innerHTML = 
 `
 <tr>
-<td id="monthlyamount">$${totalMonthly}</td>
+<td id="monthlyamount">$${totalMonthly.toLocaleString()}</td>
 </tr>
 `
 if (totalMonthly > 20000)
